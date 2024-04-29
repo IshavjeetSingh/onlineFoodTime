@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>FoodTime</title>
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <!-- logo -->
+      <h1 class="logo">FoodTime</h1>
+      <!-- list of menu -->
+      <div class="sidebar-menus">
+        <a href="#"><ion-icon name="storefront-outline"></ion-icon>Home</a>
+        <a href="#"><ion-icon name="receipt-outline"></ion-icon>Bills</a>
+        <a href="#"><ion-icon name="wallet-outline"></ion-icon>Wallet</a>
+        <a href="#"
+          ><ion-icon name="notifications-outline"></ion-icon>Notification</a
+        >
+        <a href="#footer"
+          ><ion-icon name="chatbubbles-outline"></ion-icon>Contact Us</a
+        >
+        <a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</a>
+      </div>
+      <!-- logOut -->
+      <div class="sidebar-logout">
+        <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="main">
+      <!-- main navbar -->
+      <div class="main-navbar">
+        <!-- menu when appear on mobile version -->
+        <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+        <!-- search bar -->
+        <div class="search">
+          <input type="text" placeholder="What you want to eat?" />
+          <button class="search-btn">Search</button>
+        </div>
+        <!-- profile icon on left sidebar -->
+        <div class="profile">
+          <div class="cart-button" id="my-cart">
+          <a class="cart" href="#"><ion-icon name="cart-outline"></ion-icon><span id="span">0</span></a>
+              <!-- My Cart (0 items, $0) -->
+              <!-- (0) -->
+          </div>
+          <a class="user" href="Login page/login.html" target="blank"><ion-icon name="person-outline"></ion-icon
+          ></a>
+        </div>
+      </div>
+      <!-- main highlight -->
+      <div class="main-higlight">
+        <!-- title section and arrow -->
+        <div class="main-header">
+          <h2 class="main-title">Recommendation</h2>
+          <div class="main-arrow">
+            <ion-icon
+              class="back"
+              name="chevron-back-circle-outline"
+            ></ion-icon>
+            <ion-icon
+              class="next"
+              name="chevron-forward-circle-outline"
+            ></ion-icon>
+          </div>
+        </div>
+        <!-- highlight menu -->
+        <div class="highlight-wrapper">
+          <div id="changeImgHealthy-Recommendation" class="highlight-card">
+            <img class="highlight-img" src="image/Fresh Salad.jpg" alt="" />
+            <div class="highlight-desc">
+              <h4>Fresh Salad</h4>
+              <p>₹90.00</p>
+            </div>
+          </div>
+          <div id="changeImgCoffee-Recommendation" class="highlight-card">
+            <img class="highlight-img" src="image/Hot Cafe Latte.jpg" alt="" />
+            <div class="highlight-desc">
+              <h4>Cafe Latte</h4>
+              <p>₹60.00</p>
+            </div>
+          </div>
+          <div id="changeImgSeaFood-Recommendation" class="highlight-card">
+            <img class="highlight-img" src="image/Premium Steak.jpg" alt="" />
+            <div class="highlight-desc">
+              <h4>Premium Steak</h4>
+              <p>₹220.00</p>
+            </div>
+          </div>
+          <div id="changeImgBurger-Recommendation" class="highlight-card">
+            <img class="highlight-img" src="image/Big Burger.jpg" alt="" />
+            <div class="highlight-desc">
+              <h4>Big Burger</h4>
+              <p>₹99.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main menus / order -->
+      <div class="main-menus">
+        <!-- filter section -->
+        <div class="main-filter">
+          <h2 class="main-title">Menu <br/>Categary</h2>
+          <div class="main-arrow">
+            <ion-icon
+              class="back-menus"
+              name="chevron-back-circle-outline"
+            ></ion-icon>
+            <ion-icon
+              class="next-menus"
+              name="chevron-forward-circle-outline"
+            ></ion-icon>
+          </div>
+
+          <div class="filter-wrapper">
+            <div id="changeImgAllMenu" class="filter-card" onclick="changeColor('changeImgAllMenu')">
+              <div class="filter-icon">
+                <ion-icon name="restaurant-outline"></ion-icon>
+              </div>
+              <p>All Menus</p>
+            </div>
+            <div id="changeImgBurger" class="filter-card" >
+              <div class="filter-icon">
+                <ion-icon name="fast-food-outline"></ion-icon>
+              </div>
+              <p>Burger</p>
+            </div>
+            <div id="changeImgPizza" class="filter-card" onclick="changeColor('changeImgPizza')">
+              <div class="filter-icon">
+                <ion-icon name="pizza-outline" ></ion-icon>
+              </div>
+              <p>Pizza</p>
+            </div>
+            <div id="changeImgWine" class="filter-card" onclick="changeColor('changeImgWine')">
+              <div class="filter-icon">
+                <ion-icon name="wine-outline"></ion-icon>
+              </div>
+              <p>Wine</p>
+            </div>
+            <div id="changeImgIceCream" class="filter-card" onclick="changeColor('changeImgIceCream')">
+              <div class="filter-icon">
+                <ion-icon name="ice-cream-outline"></ion-icon>
+              </div>
+              <p>Ice Cream</p>
+            </div>
+            <div id="changeImgCoffee" class="filter-card" onclick="changeColor('changeImgCoffee')">
+              <div class="filter-icon">
+                <ion-icon name="cafe-outline"></ion-icon>
+              </div>
+              <p>Coffee</p>
+            </div>
+            <div id="changeImgSeaFood" class="filter-card" onclick="changeColor('changeImgSeaFood')">
+              <div class="filter-icon">
+                <ion-icon name="fish-outline"></ion-icon>
+              </div>
+              <p>Seafood</p>
+            </div>
+            <div id="changeImgHealthy" class="filter-card" onclick="changeColor('changeImgHealthy')">
+              <div class="filter-icon">
+                <ion-icon name="nutrition-outline"></ion-icon>
+              </div>
+              <p>Healthy</p>
+            </div>
+          </div>
+        </div>
+        <hr class="divider">
+        <!-- list of food menus -->
+        <div class="main-detail">
+            <h2 class="main-title">Choose Order</h2>
+            <!-- ///////////////////////////////// -->
+            <div class="detail-wrapper">
+              <div class="detail-card" class="product">
+                <img id="menuImg" class="detail-img" src="image/Shrinp Soup.jpg" alt="">
+                <div class="detail-desc">
+                  <div class="detail-name">
+                    <h4>Shrinp Soup</h4>
+                    <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+                    <p class="price">₹152.00</p>
+                  </div>
+                  <div class="add-to-cart" data-title="Shrinp Soup" data-price="152" data-img-src="image/Shrinp Soup.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+                </div>
+            </div>
+                <div class="detail-card" class="product">
+                  <img id="bannerImg" class="detail-img" src="image/Pizza.jpg" alt="">
+                  <div class="detail-desc">
+                    <div class="detail-name">
+                      <h4>Pizza</h4>
+                      <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+                      <p class="price">₹199.00</p>
+                    </div>
+                    <div class="add-to-cart" data-title="Pizza" data-price="199" data-img-src="image/Pizza.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+                  </div>
+              </div>
+              <div class="detail-card" class="product">
+                <img id="bannerImg" class="detail-img" src="image/Wine.jpg" alt="">
+                <div class="detail-desc">
+                  <div class="detail-name">
+                    <h4>Wine</h4>
+                    <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+                    <p class="price">₹479.00</p>
+                  </div>
+                  <div class="add-to-cart" data-title="Wine" data-price="479.00" data-img-src="image/Wine.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+                </div>
+            </div>
+            <div class="detail-card" class="product">
+              <img id="bannerImg" class="detail-img" src="image/Big Burger.jpg" alt="">
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Big Burger</h4>
+                  <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+                  <p class="price">₹99.00</p>
+                </div>
+                <div class="add-to-cart" data-title="Big Burger" data-price="99" data-img-src="image/Big Burger.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+              </div>
+          </div>
+          <div class="detail-card" class="product">
+            <img id="bannerImg" class="detail-img" src="image/Hot Cafe Latte.jpg" alt="">
+            <div class="detail-desc">
+              <div class="detail-name">
+                <h4>Hot Cafe Latte</h4>
+                <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+                <p class="price">₹60.00</p>
+              </div>
+              <div class="add-to-cart" data-title="Hot Cafe Latte" data-price="60" data-img-src="image/Hot Cafe Latte.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+            </div>
+        </div>
+        <div class="detail-card" class="product">
+          <img id="bannerImg" class="detail-img" src="image/Fresh Salad.jpg" alt="">
+          <div class="detail-desc">
+            <div class="detail-name">
+              <h4>Fresh Salad</h4>
+              <p class="detail-sub">Lorem ipsum dolor sit amet consectetur</p>
+              <p class="price">₹60.00</p>
+            </div>
+            <div class="add-to-cart" data-title="Fresh Salad" data-price="60" data-img-src="image/Fresh Salad.jpg"><ion-icon class="detail-favorities" name="bookmark-outline"></ion-icon></div>
+          </div>
+      </div>
+             
+            </div>
+        </div>
+      </div>
+<!-- =============== cart sidebar (My Cart)section ================ -->
+<!-- Cart Modal -->
+<div class="cartModal">
+<div id="cart-modal" class="cart-modal">
+  <div class="close-btn">
+      <div id="close-modal"><ion-icon  name="close-circle-outline"></ion-icon></div>
+  </div>
+  <h2>My Cart</h2>
+  <div class="cart-details" id="cart-details">
+      <!-- Cart details will be populated here -->
+  </div>
+  <div class="sidebar--footer">
+  <p class="cart-total-items">Total Items: <span id="cart-total-items">0</span></p>
+  <p class="cart-total-price cart-total" >Total Price: ₹<span id="cart-total-price">0.00</span></p>
+  <button class="checkout-btn">Check Out</button>
+</div>
+</div>
+</div>
+<!-- ====================== footer =========================== -->
+    <footer id="footer">
+      <div class="footer-menu">
+        <ul class="ul-aboutUs">
+          <p class="title">ABOUT US:</p>
+          <p class="content">
+            Welcome to Food Time, where we're passionate about bringing delicious food right to your doorstep. As food enthusiasts ourselves, we understand the joy that comes from savoring a perfectly crafted meal, whether it's a comforting classic or an adventurous culinary creation.
+
+At Food Time, we believe in more than just providing sustenance; we're committed to creating memorable dining experiences. Our journey began with a simple idea: to make high-quality, mouthwatering dishes accessible to everyone, regardless of their busy schedules or culinary expertise.
+          </p>
+        </ul>
+        <ul>
+          <p class="title">QUICK LINKS</p>
+          <li><a href="#Our Courses">Who We Are</a></li>
+          <li><a href="#Our Professors">Blog</a></li>
+          <li><a href="#Scholarship">Work With Us</a></li>
+          <li><a href="#Our Product">Investor Relations</a></li>
+          <li><a href="#Admission">Report Fraud</a></li>
+          <li><a href="#Admission">Press Kit</a></li>
+          <li><a href="#Admission">Contact Us</a></li>
+        </ul>
+        <ul>
+          <p class="title">FOR RESTAURANTS</p>
+          <li><a href="#Upcoming Events">Partner With Us</a></li>
+          <li><a href="#Rules & Regulation">Apps For You</a></li>
+        </ul>
+        <ul>
+          <p class="title">LEARN MORE</p>
+          <li><a href="#Upcoming Events">Privacy</a></li>
+          <li><a href="#Rules & Regulation">Security</a></li>
+          <li><a href="#Privacy Policy">Terms</a></li>
+          <li><a href="#Our departments">Sitemap</a></li>
+        </ul>
+        <ul>
+          <p class="title">SOCIAL LINKS</p>
+          <div class="socialIcons">
+            <a href="https://www.facebook.com/"><img src="MediaLogo/facebook logo_icon.png" alt="" /></a>
+            <a href="https://www.instagram.com/"><img src="MediaLogo/instagram logo_icon.png" alt="" /></a>
+            <a href="https://www.youtube.com/"><img src="MediaLogo/youtuble logo_icon.png" alt="" /></a>
+            <a href="https://www.reddit.com/"><img src="MediaLogo/reddit logo_icon.png" alt="" /></a>
+          </div>
+          <li><img style="cursor: pointer;" src="MediaLogo/App_Store_Badge.png" alt="" height="30px" width="120px"></li>
+          <li><img style="cursor: pointer;" src="MediaLogo/Google_Play_Store.webp" alt="" height="30px" width="120px"></li>
+        </ul>
+      </div>
+      <hr class="divider">
+      <p class="policy">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2022-2024 © FoodTime™ Ltd. All rights reserved.</p>
+    </footer>
+  </body>
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="app.js"></script>
+  <script src="myCart.js"></script>
+  
+</html>
